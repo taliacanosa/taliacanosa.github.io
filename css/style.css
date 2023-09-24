@@ -1,0 +1,289 @@
+:root {
+    --color-text: white;
+    --bgcolor1: #5a5626;
+    --bgcolor2: #AEC3AE;
+    --bgcolor3: #E4E4D0;
+    --bgboton: #f16c99;
+    --visited: rgba(245, 245, 28, 0.979);
+
+}
+
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+header {
+    background-color: var(--bgcolor1);
+    color: var(--color-text);
+    height: 4em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    .ticmas-logo {
+        display: inline-block;
+
+        & img {
+            height: 3em;
+            padding: 0 2em;
+            margin: 0.5em;
+        }
+
+        & h2 {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+& nav {
+    float: right;
+    margin: 1.3em 3em;
+
+    & a {
+        color: var(--text-color);
+        padding: 0 0.8em;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+
+    & a:hover {
+        color: #f16c99;
+    }
+
+    .blog {
+        color: var(--bgcolor2);
+    }
+}
+
+main {
+    position: relative;
+
+    & img {
+        filter: brightness(0.7);
+        width: 100%;
+        margin: 25px 0 0 0;
+    }
+
+    & section {
+        width: 40%;
+        position: absolute;
+        right: 4em;
+        top: 60%;
+        color: var(--color-text);
+        text-align: right;
+        line-height: 1.5em;
+        
+
+        & p {
+            margin: 30px 0;
+        }
+
+        & h4 {
+            font-size: 0.9em;
+            margin: 10px;
+            font-weight: lighter;
+        }
+
+        & h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'portfolio portfolio'
+        'educacion experiencia'
+        'formulario formulario';
+    width: 100%;
+    grid-template-rows: 100vh 60vh 80vh;
+    grid-template-columns: 50% 50%;
+
+    /*solo para ver las areas
+    & div[class^='item'] {
+        border: solid 2px purple;
+    }
+    */
+
+    .item-1 {
+        grid-area: portfolio;
+        
+        .title-portfolio {
+            margin: 20px;
+            text-align: center;
+
+            & h4 {
+                font-size: 0.7em;
+                letter-spacing: 0.9em;
+                margin: 0;
+            }
+
+            & h2 {
+                font-size: 2em;
+                margin: 0;
+            }
+        }
+
+        .card-portfolio {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+           
+            
+
+            & div[class^='card'] {
+                width: 300px;
+                border: solid 1px var(--bgcolor2);
+                border-radius: 5px;
+                margin: 0 20px 0 20px;
+
+                & img {
+                    width: 100%;
+                }
+
+                .container-card {
+                    width: 80%;
+                    margin: 20px;
+
+                    & a {
+                        text-decoration: none;
+                        padding: 0 5px;
+                        border: solid 1px var(--bgcolor2);
+                        background-color: var(--bgcolor2);
+                        border-radius: 5px;
+                        color: var(--color-text);
+                        font-weight: 300;
+                        font-size: .9em;
+                    }
+
+                    & h3 {
+                        margin: 5px 0 10px 0;
+                    }
+
+                    & p {
+                        line-height: 1.5em;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-2 {
+    grid-area: educacion;
+    width: 100%;
+    padding: 45px 0 0 60px;
+    background-color: var(--bgcolor3);
+    color: var(--bgcolor1);
+    
+    & ul {
+        line-height: 1.7em;
+        list-style-type: none;
+    }
+}
+
+.item-3 {
+    grid-area: experiencia;
+    width: 100%;
+    padding: 45px 0 0 60px;
+    background-color: var(--bgcolor3);
+    color: var(--bgcolor1);
+
+    & ul {
+        line-height: 1.7em;
+        list-style-type: none;
+    }
+}
+
+.item-4 {
+    grid-area: formulario;
+    display: flex;
+    flex-wrap: row wrap;
+    color: var(--bgcolor1);
+    margin: 0 0 0 30%;
+    width: 100%;
+
+    .title-formulario {
+        margin: 20px;
+        text-align: center;
+
+        & h4 {
+            font-size: 0.7em;
+            letter-spacing: 0.5em;
+            margin: 0;
+        }
+
+        & h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+    }
+
+    .grid-formulario {
+            display: flex;
+            flex-flow:column;
+            justify-content: center;
+            width: 40%;
+
+    }
+
+    & .casillero-1 {
+        border: solid 1px var(--bgcolor1);
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 5px;
+        width: 44%;
+        
+    }
+    
+    & .casillero-2 {
+        border: solid 1px var(--bgcolor1);
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 5px;
+        width: 90%;
+    }
+
+    & .btn-enviar {
+        margin: 5px;
+        border: solid 1px var(--bgboton);
+        background-color: var(--bgboton);
+        border-radius: 5px;
+        padding: 5px;
+        width: 90%;
+        color: var(--color-text);
+        letter-spacing: 0.2em;
+    }
+}
+
+footer {
+    height: 4em;
+    width: 100%;
+    background-color: var(--bgcolor1);
+    color: var(--color-text);
+    text-align: center;
+
+    .footer-content {
+        display: inline-block;
+
+        & li {
+            float: right;
+            padding: 0 50px 0 50px;
+            list-style-type: none;
+            justify-content: space-evenly;
+        }
+    }
+    }
+

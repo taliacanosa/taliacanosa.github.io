@@ -1,0 +1,38 @@
+:root {
+    --color-text: white;
+    --bgcolor1: #5a5626;
+    --bgcolor2: #AEC3AE;
+    --bgcolor3: #E4E4D0;
+    --bgboton: #f16c99;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor2);
+       
+    .en-construccion {
+        color: var(--color-text);
+        text-align: center;
+        margin: 300px;
+        
+        & h1 {
+            height: 0.9em;
+
+        }
+
+        & a {
+            text-decoration: none;
+            color: var(--bgcolor1);
+
+        }
+    }
+
+}
